@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julee|Yeon Sung|ADLaM Display">
+	<title>Meal Request</title>
+	<style type="text/css">
+		.a {
+			position: absolute;
+			bottom: 50px;
+			border: solid 1px black;
+		}
+		.topic{
+			font-family: Yeon Sung; 
+			color: #360810; 
+			font-weight: 700; 
+			text-align: center;
+			font-size: 90px;
+		}
+		body {
+ 			background-image: url("mr.jpg");
+ 			background-color: #cccccc;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1 class="topic">Meal Request</h1>
+	<br><br><br><br>
+	<section class="container my-2 bg-dark w-50 text-light p-2 ">
+<form class="row g-3">
+  <div class="col-md-6">
+    <label for="hid" class="form-label">Hostel ID</label>
+    <input type="text" class="form-control" id="hid">
+  </div>
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+  <div class="col-6 ">
+    <label for="Date" class="form-label">Date</label>
+    <input type="text" class="form-control" id="date">
+    
+  </div>
+  <div class="col-6 ">
+    <label for="meal" class="form-label">Meal Type</label>
+    <input type="text" class="form-control" id="meal" placeholder="Eg - Breakfast / Lunch / Dinner">
+    
+  </div>
+  <div class="col-6 ">
+    <label for="qty" class="form-label">Quantity</label>
+    <input type="text" class="form-control" id="qty">
+    
+  </div>
+	  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</section>
+	
+
+
+</body>
+</html>

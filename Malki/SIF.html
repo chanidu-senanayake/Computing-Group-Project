@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .form-container {
+            background-color: #222; /* Dark background color for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #fff; /* Text color for the form heading */
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #fff; /* Text color for labels */
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select,
+        input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fff; /* Light background color for input fields */
+            color: #333; /* Text color for input fields */
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Custom CSS for Joining Date */
+        .join-date-container {
+            position: relative;
+        }
+
+        .join-date-container input[type="date"] {
+            position: relative;
+            z-index: 1;
+        }
+
+        .join-date-container:before {
+            content: '\f073'; /* FontAwesome calendar icon */
+            font-family: FontAwesome;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #aaa;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Registration Form</h2>
+
+    <form action="submit_form.php" method="POST">
+        <label for="full_name">Full Name:</label><br>
+        <input type="text" id="full_name" name="full_name" required><br>
+        
+        <label for="home_address">Home Address:</label><br>
+        <textarea id="home_address" name="home_address" rows="2" required></textarea><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        
+        <label for="hostal_id">Hostal ID:</label><br>
+        <input type="text" id="hostal_id" name="hostal_id" required><br>
+        
+        <label for="nic">NIC:</label><br>
+        <input type="text" id="nic" name="nic" required><br>
+        
+        <label for="university_name">University Name:</label><br>
+        <input type="text" id="university_name" name="university_name" required><br>
+        
+        <label for="contact_number">Student's Contact Number:</label><br>
+        <input type="text" id="contact_number" name="contact_number" required><br>
+        
+        <label for="parents_name">Parent's Name:</label><br>
+        <input type="text" id="parents_name" name="parents_name" required><br>
+        
+        <label for="parent_contact">Parent's Contact Number:</label><br>
+        <input type="text" id="parent_contact" name="parent_contact" required><br>
+        
+        <label for="join_date">Joined Date:</label><br>
+        <div class="join-date-container">
+            <input type="date" id="join_date" name="join_date" required>
+        </div><br>
+        <center>
+        <input type="submit" value="Submit"></center>
+    </form>
+</div>
+
+</body>
+</html>
+

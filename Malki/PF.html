@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+              background-color: #333; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 0.9em;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none; /* No border */
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff; /* White background */
+            color: #000; /* Black font color */
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .payment-method {
+            margin-bottom: 20px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .payment-option label {
+            margin-left: 10px;
+            font-size: 1em;
+        }
+        .payment-option input[type="radio"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            outline: none;
+            cursor: pointer;
+        }
+        .payment-option input[type="radio"]:checked {
+            background-color: #007bff;
+        }
+        .payment-option input[type="radio"]:checked::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <h2>Payment</h2>
+
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="hostel_id">Hostel ID:</label>
+            <input type="text" id="hostel_id" name="hostel_id" required>
+
+            <label for="payment_date">Payment Date:</label>
+            <input type="date" id="payment_date" name="payment_date" required>
+
+            <div class="payment-method">
+                <label>Payment Method:</label>
+                <div class="payment-option">
+                    <input type="radio" id="cash" name="payment_method" value="cash" required>
+                    <label for="cash">Cash</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="card" name="payment_method" value="card" required>
+                    <label for="card">Card</label>
+                </div>
+            </div>
+
+            <label for="staff_member">Collect Staff Member:</label>
+            <input type="text" id="staff_member" name="staff_member" placeholder="Enter staff member's name" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
